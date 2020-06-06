@@ -1,40 +1,32 @@
 // jshint esversion: 6
 
 //write a reverseOneWord function
-function reverseWord(word) {
 
-  return word;
-
-}
-
-let revWord1 = (sentence) => {
-  let wordArray = sentence.split(),
-    result ="";
-
+let revWords1 = phrase => {
+  let wordArray = phrase.split("");
+  let newPhrase = " ";
   for (let i = 0; i < wordArray.length; i++) {
-    let currentWord = wordArray[i];
-    let reversedWord = reverseWord(currentWord);
+    newPhrase = wordArray[i] + newPhrase;
   }
-
-  return result;
+  return newPhrase;
 };
 
-let revWord2 = (sent) => {
-  let arr = sent.split("");
-  let result = "";
-  arr.forEach((char)=>{
-    result = char + result;
-  })
-  return result;
+let revWords2 = (phrase) => {
+  let arr = phrase.split("");
+  let newPhrase = " ";
+  arr.forEach(function(word) {
+    newPhrase = word + newPhrase;
+  });
+  return newPhrase;
 };
 
-let revWord3 = (sent) => {
-  let arr = sent.split("");
-  let result = "";
-  for (char of arr){
-    result = char + result;
+let revWords3 = (phrase) => {
+  let arr = phrase.split("");
+  let newPhrase = " ";
+  for (const x of arr){
+    newPhrase = x + newPhrase;
   }
-  return result;
+  return newPhrase;
 };
 
 let containsDuplicates = s => {
